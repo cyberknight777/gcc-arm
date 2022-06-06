@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.1.1 20220602 (Stable)")
+(!version  "12.1.1 20220606 (Stable)")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 227 0
@@ -28950,7 +28950,7 @@
   nil 0 nil nil )
  
  (!type struct 2084 nil  gc_used "typename_hasher"
-  (!srcfileloc  "cp/decl.cc" 4039)
+  (!srcfileloc  "cp/decl.cc" 4047)
   (!fields 0 )
   nil 516 nil nil )
  
@@ -28959,11 +28959,11 @@
    (!type already_seen 2085)
   )
   gc_pointed_to "hash_table<typename_hasher>"
-  (!srcfileloc  "cp/decl.cc" 4039)
+  (!srcfileloc  "cp/decl.cc" 4047)
   (!fields 1 
    (!pair  "typename_hasher"
     (!type already_seen 2084)
-    (!srcfileloc  "cp/decl.cc" 4039)
+    (!srcfileloc  "cp/decl.cc" 4047)
     nil )
   )
  )
@@ -31130,11 +31130,11 @@
   nil )
  (!pair  "typename_hasher"
   (!type already_seen 2084)
-  (!srcfileloc  "cp/decl.cc" 4039)
+  (!srcfileloc  "cp/decl.cc" 4047)
   nil )
  (!pair  "hash_table<typename_hasher>"
   (!type already_seen 2085)
-  (!srcfileloc  "cp/decl.cc" 4039)
+  (!srcfileloc  "cp/decl.cc" 4047)
   nil )
  (!pair  "incomplete_var"
   (!type already_seen 2079)
@@ -35644,18 +35644,18 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.cc" 9362)
+  (!srcfileloc  "cp/decl.cc" 9370)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 930)
-  (!srcfileloc  "cp/decl.cc" 8815)
+  (!srcfileloc  "cp/decl.cc" 8823)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "typename_htab"
   (!type already_seen 2086)
-  (!srcfileloc  "cp/decl.cc" 4039)
+  (!srcfileloc  "cp/decl.cc" 4047)
   nil )
  (!pair  "local_entities"
   (!type already_seen 84)
