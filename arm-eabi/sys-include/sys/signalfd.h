@@ -1,62 +1,49 @@
-/* Copyright (C) 2007-2022 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
+#ifndef _SYS_SIGNALFD_H
+#define _SYS_SIGNALFD_H
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <https://www.gnu.org/licenses/>.  */
-
-#ifndef	_SYS_SIGNALFD_H
-#define	_SYS_SIGNALFD_H	1
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <stdint.h>
-#include <bits/types/sigset_t.h>
+#include <fcntl.h>
 
-/* Get the platform-dependent flags.  */
-#include <bits/signalfd.h>
+#define __NEED_sigset_t
 
-struct signalfd_siginfo
-{
-  uint32_t ssi_signo;
-  int32_t ssi_errno;
-  int32_t ssi_code;
-  uint32_t ssi_pid;
-  uint32_t ssi_uid;
-  int32_t ssi_fd;
-  uint32_t ssi_tid;
-  uint32_t ssi_band;
-  uint32_t ssi_overrun;
-  uint32_t ssi_trapno;
-  int32_t ssi_status;
-  int32_t ssi_int;
-  uint64_t ssi_ptr;
-  uint64_t ssi_utime;
-  uint64_t ssi_stime;
-  uint64_t ssi_addr;
-  uint16_t ssi_addr_lsb;
-  uint16_t __pad2;
-  int32_t ssi_syscall;
-  uint64_t ssi_call_addr;
-  uint32_t ssi_arch;
-  uint8_t __pad[28];
+#include <bits/alltypes.h>
+
+#define SFD_CLOEXEC O_CLOEXEC
+#define SFD_NONBLOCK O_NONBLOCK
+
+int signalfd(int, const sigset_t *, int);
+
+struct signalfd_siginfo {
+	uint32_t  ssi_signo;
+	int32_t   ssi_errno;
+	int32_t   ssi_code;
+	uint32_t  ssi_pid;
+	uint32_t  ssi_uid;
+	int32_t   ssi_fd;
+	uint32_t  ssi_tid;
+	uint32_t  ssi_band;
+	uint32_t  ssi_overrun;
+	uint32_t  ssi_trapno;
+	int32_t   ssi_status;
+	int32_t   ssi_int;
+	uint64_t  ssi_ptr;
+	uint64_t  ssi_utime;
+	uint64_t  ssi_stime;
+	uint64_t  ssi_addr;
+	uint16_t  ssi_addr_lsb;
+	uint16_t  __pad2;
+	int32_t   ssi_syscall;
+	uint64_t  ssi_call_addr;
+	uint32_t  ssi_arch;
+	uint8_t   __pad[128-14*4-5*8-2*2];
 };
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+}
+#endif
 
-/* Request notification for delivery of signals in MASK to be
-   performed using descriptor FD.*/
-extern int signalfd (int __fd, const sigset_t *__mask, int __flags)
-  __THROW __nonnull ((2));
-
-__END_DECLS
-
-#endif /* sys/signalfd.h */
+#endif

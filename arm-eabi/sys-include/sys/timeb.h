@@ -1,35 +1,28 @@
-/* Copyright (C) 1994-2022 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <https://www.gnu.org/licenses/>.  */
-
 #ifndef _SYS_TIMEB_H
-#define _SYS_TIMEB_H	1
+#define _SYS_TIMEB_H
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <features.h>
 
-__BEGIN_DECLS
+#define __NEED_time_t
 
-# include <bits/types/struct_timeb.h>
+#include <bits/alltypes.h>
 
-/* Fill in TIMEBUF with information about the current time.  */
+struct timeb {
+	time_t time;
+	unsigned short millitm;
+	short timezone, dstflag;
+};
 
-extern int ftime (struct timeb *__timebuf)
-  __nonnull ((1))
-  __attribute_deprecated_msg__ ("Use gettimeofday or clock_gettime instead");
+int ftime(struct timeb *);
 
-__END_DECLS
+#if _REDIR_TIME64
+__REDIR(ftime, __ftime64);
+#endif
 
-#endif	/* sys/timeb.h */
+#ifdef __cplusplus
+}
+#endif
+#endif

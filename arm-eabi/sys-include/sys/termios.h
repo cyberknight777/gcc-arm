@@ -1,4 +1,2 @@
-#ifndef _SYS_TERMIOS_H
-#define _SYS_TERMIOS_H
+#warning redirecting incorrect #include <sys/termios.h> to <termios.h>
 #include <termios.h>
-#endif
