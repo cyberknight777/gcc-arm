@@ -5,13 +5,13 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname=''
+dlname='liblto_plugin.so'
 
 # Names of this library.
-library_names=''
+library_names='liblto_plugin.so liblto_plugin.so liblto_plugin.so'
 
 # The name of the static archive.
-old_library='liblto_plugin.a'
+old_library=''
 
 # Linker flags that can not go in dependency_libs.
 inherited_linker_flags=''
