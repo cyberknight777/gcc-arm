@@ -38,7 +38,7 @@
 #define _GLIBCXX_RELEASE 12
 
 // The datestamp of the C++ library in compressed ISO date format.
-#define __GLIBCXX__ 20220628
+#define __GLIBCXX__ 20220810
 
 // Macros for various attributes.
 //   _GLIBCXX_PURE
@@ -1141,6 +1141,9 @@ namespace std
 
 /* Define if <math.h> defines obsolete isnan function. */
 /* #undef _GLIBCXX_HAVE_OBSOLETE_ISNAN */
+
+/* Define if openat is available in <fcntl.h>. */
+#define _GLIBCXX_HAVE_OPENAT 1
 
 /* Define if poll is available in <poll.h>. */
 #define _GLIBCXX_HAVE_POLL 1
@@ -1872,11 +1875,11 @@ namespace std
 
 /* Define if c8rtomb and mbrtoc8 functions in <uchar.h> should be imported
    into namespace std in <cuchar> for C++20. */
-/* #undef _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_CXX20 */
+#define _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_CXX20 1
 
 /* Define if c8rtomb and mbrtoc8 functions in <uchar.h> should be imported
    into namespace std in <cuchar> for -fchar8_t. */
-/* #undef _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_FCHAR8_T */
+#define _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_FCHAR8_T 1
 
 /* Define if utime is available in <utime.h>. */
 #define _GLIBCXX_USE_UTIME 1
@@ -2271,7 +2274,7 @@ namespace std
 #define _GLIBCXX_RELEASE 12
 
 // The datestamp of the C++ library in compressed ISO date format.
-#define __GLIBCXX__ 20220628
+#define __GLIBCXX__ 20220810
 
 // Macros for various attributes.
 //   _GLIBCXX_PURE
@@ -3093,7 +3096,7 @@ namespace std
 #define _GLIBCXX_HAVE_ALIGNED_ALLOC 1
 
 /* Define if arc4random is available in <stdlib.h>. */
-/* #undef _GLIBCXX_HAVE_ARC4RANDOM */
+#define _GLIBCXX_HAVE_ARC4RANDOM 1
 
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 #define _GLIBCXX_HAVE_ARPA_INET_H 1
@@ -3374,6 +3377,9 @@ namespace std
 
 /* Define if <math.h> defines obsolete isnan function. */
 /* #undef _GLIBCXX_HAVE_OBSOLETE_ISNAN */
+
+/* Define if openat is available in <fcntl.h>. */
+#define _GLIBCXX_HAVE_OPENAT 1
 
 /* Define if poll is available in <poll.h>. */
 #define _GLIBCXX_HAVE_POLL 1
@@ -4105,11 +4111,11 @@ namespace std
 
 /* Define if c8rtomb and mbrtoc8 functions in <uchar.h> should be imported
    into namespace std in <cuchar> for C++20. */
-/* #undef _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_CXX20 */
+#define _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_CXX20 1
 
 /* Define if c8rtomb and mbrtoc8 functions in <uchar.h> should be imported
    into namespace std in <cuchar> for -fchar8_t. */
-/* #undef _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_FCHAR8_T */
+#define _GLIBCXX_USE_UCHAR_C8RTOMB_MBRTOC8_FCHAR8_T 1
 
 /* Define if utime is available in <utime.h>. */
 #define _GLIBCXX_USE_UTIME 1

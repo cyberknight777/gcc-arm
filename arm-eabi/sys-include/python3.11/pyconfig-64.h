@@ -52,6 +52,9 @@
 /* Define if getpgrp() must be called as getpgrp(0). */
 /* #undef GETPGRP_HAVE_ARG */
 
+/* Define if you have the 'accept' function. */
+#define HAVE_ACCEPT 1
+
 /* Define to 1 if you have the `accept4' function. */
 #define HAVE_ACCEPT4 1
 
@@ -81,6 +84,9 @@
 
 /* Define to 1 if you have the `atanh' function. */
 #define HAVE_ATANH 1
+
+/* Define if you have the 'bind' function. */
+#define HAVE_BIND 1
 
 /* Define to 1 if you have the `bind_textdomain_codeset' function. */
 #define HAVE_BIND_TEXTDOMAIN_CODESET 1
@@ -160,6 +166,9 @@
 
 /* Define to 1 if you have the <conio.h> header file. */
 /* #undef HAVE_CONIO_H */
+
+/* Define if you have the 'connect' function. */
+#define HAVE_CONNECT 1
 
 /* Define to 1 if you have the `copy_file_range' function. */
 #define HAVE_COPY_FILE_RANGE 1
@@ -278,6 +287,9 @@
 
 /* Define to 1 if you have the `dlopen' function. */
 #define HAVE_DLOPEN 1
+
+/* Define to 1 if you have the `dup' function. */
+#define HAVE_DUP 1
 
 /* Define to 1 if you have the `dup2' function. */
 #define HAVE_DUP2 1
@@ -466,8 +478,11 @@
 /* Define to 1 if you have the `getgroups' function. */
 #define HAVE_GETGROUPS 1
 
+/* Define if you have the 'gethostbyaddr' function. */
+#define HAVE_GETHOSTBYADDR 1
+
 /* Define to 1 if you have the `gethostbyname' function. */
-/* #undef HAVE_GETHOSTBYNAME */
+#define HAVE_GETHOSTBYNAME 1
 
 /* Define this if you have some version of gethostbyname_r() */
 #define HAVE_GETHOSTBYNAME_R 1
@@ -480,6 +495,9 @@
 
 /* Define this if you have the 6-arg version of gethostbyname_r(). */
 #define HAVE_GETHOSTBYNAME_R_6_ARG 1
+
+/* Define to 1 if you have the `gethostname' function. */
+#define HAVE_GETHOSTNAME 1
 
 /* Define to 1 if you have the `getitimer' function. */
 #define HAVE_GETITIMER 1
@@ -496,7 +514,7 @@
 /* Define if you have the 'getpagesize' function. */
 #define HAVE_GETPAGESIZE 1
 
-/* Define to 1 if you have the `getpeername' function. */
+/* Define if you have the 'getpeername' function. */
 #define HAVE_GETPEERNAME 1
 
 /* Define to 1 if you have the `getpgid' function. */
@@ -513,6 +531,9 @@
 
 /* Define to 1 if you have the `getpriority' function. */
 #define HAVE_GETPRIORITY 1
+
+/* Define if you have the 'getprotobyname' function. */
+#define HAVE_GETPROTOBYNAME 1
 
 /* Define to 1 if you have the `getpwent' function. */
 #define HAVE_GETPWENT 1
@@ -541,8 +562,17 @@
 /* Define to 1 if you have the `getrusage' function. */
 #define HAVE_GETRUSAGE 1
 
+/* Define if you have the 'getservbyname' function. */
+#define HAVE_GETSERVBYNAME 1
+
+/* Define if you have the 'getservbyport' function. */
+#define HAVE_GETSERVBYPORT 1
+
 /* Define to 1 if you have the `getsid' function. */
 #define HAVE_GETSID 1
+
+/* Define if you have the 'getsockname' function. */
+#define HAVE_GETSOCKNAME 1
 
 /* Define to 1 if you have the `getspent' function. */
 #define HAVE_GETSPENT 1
@@ -577,6 +607,9 @@
 
 /* Define if you have the 'inet_aton' function. */
 #define HAVE_INET_ATON 1
+
+/* Define if you have the 'inet_ntoa' function. */
+#define HAVE_INET_NTOA 1
 
 /* Define if you have the 'inet_pton' function. */
 #define HAVE_INET_PTON 1
@@ -710,6 +743,9 @@
 /* Define to 1 if you have the <linux/wait.h> header file. */
 #define HAVE_LINUX_WAIT_H 1
 
+/* Define if you have the 'listen' function. */
+#define HAVE_LISTEN 1
+
 /* Define to 1 if you have the `lockf' function. */
 #define HAVE_LOCKF 1
 
@@ -790,6 +826,9 @@
 
 /* Define to 1 if you have the <netcan/can.h> header file. */
 /* #undef HAVE_NETCAN_CAN_H */
+
+/* Define to 1 if you have the <netdb.h> header file. */
+#define HAVE_NETDB_H 1
 
 /* Define to 1 if you have the <netinet/in.h> header file. */
 #define HAVE_NETINET_IN_H 1
@@ -888,6 +927,9 @@
 /* Define to 1 if you have the `pthread_sigmask' function. */
 #define HAVE_PTHREAD_SIGMASK 1
 
+/* Define if platform requires stubbed pthreads support */
+/* #undef HAVE_PTHREAD_STUBS */
+
 /* Define to 1 if you have the <pty.h> header file. */
 #define HAVE_PTY_H 1
 
@@ -911,6 +953,9 @@
 
 /* Define to 1 if you have the `realpath' function. */
 #define HAVE_REALPATH 1
+
+/* Define if you have the 'recvfrom' function. */
+#define HAVE_RECVFROM 1
 
 /* Define to 1 if you have the `renameat' function. */
 #define HAVE_RENAMEAT 1
@@ -981,6 +1026,9 @@
 /* Define to 1 if you have the `sendfile' function. */
 #define HAVE_SENDFILE 1
 
+/* Define if you have the 'sendto' function. */
+#define HAVE_SENDTO 1
+
 /* Define to 1 if you have the `setegid' function. */
 #define HAVE_SETEGID 1
 
@@ -1028,6 +1076,9 @@
 
 /* Define to 1 if you have the `setsid' function. */
 #define HAVE_SETSID 1
+
+/* Define if you have the 'setsockopt' function. */
+#define HAVE_SETSOCKOPT 1
 
 /* Define to 1 if you have the `setuid' function. */
 #define HAVE_SETUID 1
@@ -1091,6 +1142,9 @@
 
 /* struct sockaddr_storage (sys/socket.h) */
 #define HAVE_SOCKADDR_STORAGE 1
+
+/* Define if you have the 'socket' function. */
+#define HAVE_SOCKET 1
 
 /* Define if you have the 'socketpair' function. */
 #define HAVE_SOCKETPAIR 1
